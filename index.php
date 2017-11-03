@@ -16,6 +16,15 @@ catch(PDOException $e)
 
   $sqlresult =$conn->query("select * from accounts where id<6");
 
+  if($sqlresult->rowCount())
+	{
+	echo $sqlresult->rowCount().'<br><br>';
+	}
+	else 
+	{
+	echo "No results";
+	}
+
   echo "<table border='1'>";
    echo "<tr><td>id</td><td>email</td><td>fname</td><td>lname</td><td>phone</td><td>birthday</td><td>gender</td><td>password</td></tr>";
 
