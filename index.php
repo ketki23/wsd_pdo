@@ -18,7 +18,7 @@ catch(PDOException $e)
 
   if($sqlresult->rowCount())
 	{
-	echo $sqlresult->rowCount().'<br><br>';
+	echo "The number of records is ".$sqlresult->rowCount().'<br><br>';
 	}
 	else 
 	{
